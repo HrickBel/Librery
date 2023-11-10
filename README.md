@@ -7,15 +7,15 @@ Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso
 
 # Time
 
--[Luiz Carlos - Product Owner (PO)](https://github.com/Dark-Llght)
+- [Luiz Carlos - Product Owner (PO)](https://github.com/Dark-Llght)
 
--[Henrique Belém dos Santos - Scrum Master](https://github.com/HrickBel/)
+- [Henrique Belém dos Santos - Scrum Master](https://github.com/HrickBel/)
 
--[Amanda Kamilly - Web Designer](https://github.com/Kamilly132)
+- [Amanda Kamilly - Web Designer](https://github.com/Kamilly132)
 
--[Karlos Abiel Brito - Time de desenvolvimento](https://github.com/WorstCoding)
+- [Karlos Abiel Brito - Time de desenvolvimento](https://github.com/WorstCoding)
 
--[Davi Santiago - Time de desenvolvimento]()
+- [Davi Santiago - Time de desenvolvimento]()
 
 # framework
 
@@ -34,9 +34,9 @@ Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso
 
 # Dependencias
 
--MySQL
--Node.JS
--npm
+- MySQL
+- Node.JS
+- npm
 # Instancia local
 instalando
 ```
@@ -51,4 +51,4 @@ Rodando
 npm start
 ```
 # Licença
--MIT(https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+- MIT(https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
