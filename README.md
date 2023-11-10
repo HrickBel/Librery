@@ -5,7 +5,7 @@ Sistema de gerenciamento de atividades da biblioteca
 Manutenir bibliotecas é complicado, manter controle sobre as entradas e saídas de livros requer muito dos bibliotecarios e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário. 
 Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso, o librery, sana a necessidade de um ocupador para a biblioteca.
 
-#Time
+# Time
 
 -[Luiz Carlos - Product Owner (PO)](https://github.com/Dark-Llght)
 
@@ -17,7 +17,7 @@ Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso
 
 -[Davi Santiago - Time de desenvolvimento]()
 
-##framework
+# framework
 
 ![scrum](https://img.shields.io/badge/Scrum%20Alliance-009FDA.svg?style=for-the-badge&logo=Scrum-Alliance&logoColor=white)
 
@@ -32,12 +32,12 @@ Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso
 ![vsCode](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC.svg?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
 ![Github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)
 
-##Dependencias
+# Dependencias
 
 -MySQL
 -Node.JS
 -npm
-##Instancia local
+# Instancia local
 instalando
 ```
 git clone https://github.com/HrickBel/Librery
@@ -50,5 +50,5 @@ Rodando
 ```
 npm start
 ```
-##Licença
+# Licença
 -MIT(https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
