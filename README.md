@@ -6,13 +6,19 @@ Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso
 
 ###Time
 -[Luiz Carlos - Product Owner (PO)](https://github.com/Dark-Llght)
+
 -[Henrique Belém dos Santos - Scrum Master](https://github.com/HrickBel/)
+
 -[Amanda Kamilly - Web Designer](https://github.com/Kamilly132)
+
 -[Karlos Abiel Brito - Time de desenvolvimento](https://github.com/WorstCoding)
+
 -[Davi Santiago - Time de desenvolvimento]()
 
 ##framework
+
 ![scrum](https://img.shields.io/badge/Scrum%20Alliance-009FDA.svg?style=for-the-badge&logo=Scrum-Alliance&logoColor=white)
+
 ##tecnologias
 ![nodejs](https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![sequelize](https://img.shields.io/badge/Sequelize-52B0E7.svg?style=for-the-badge&logo=Sequelize&logoColor=white)
