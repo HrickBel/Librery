@@ -51,4 +51,4 @@ Rodando
 npm start
 ```
 # Licença
-- MIT(https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+- [MIT](https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
