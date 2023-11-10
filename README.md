@@ -21,7 +21,7 @@ Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso
 
 ![scrum](https://img.shields.io/badge/Scrum%20Alliance-009FDA.svg?style=for-the-badge&logo=Scrum-Alliance&logoColor=white)
 
-##tecnologias
+# tecnologias
 ![nodejs](https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![sequelize](https://img.shields.io/badge/Sequelize-52B0E7.svg?style=for-the-badge&logo=Sequelize&logoColor=white)
 ![npm](https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
