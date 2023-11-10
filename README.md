@@ -1,10 +1,12 @@
 # Librery
+
 Sistema de gerenciamento de atividades da biblioteca
 ##Problemática
 Manutenir bibliotecas é complicado, manter controle sobre as entradas e saídas de livros requer muito dos bibliotecarios e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário. 
 Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso, o librery, sana a necessidade de um ocupador para a biblioteca.
 
 ##Time
+
 -[Luiz Carlos - Product Owner (PO)](https://github.com/Dark-Llght)
 
 -[Henrique Belém dos Santos - Scrum Master](https://github.com/HrickBel/)
