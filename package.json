@@ -1,0 +1,30 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "cd ./ && nodemon"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^3.6.3",
+    "nodemon": "^3.0.1",
+    "sequelize": "^6.34.0"
+  },
+  "description": "Sistema de gerenciamento de atividades da biblioteca ##Problemática Manutenir bibliotecas é complicado, manter controle sobre as entradas e saídas de livros requer muito dos bibliotecarios e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário.  Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso, o librery, sana a necessidade de um ocupador para a biblioteca.",
+  "main": "./bin/www",
+  "devDependencies": {
+    "eslint": "^8.53.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

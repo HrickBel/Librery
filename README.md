@@ -1,9 +1,9 @@
 # Librery
 
 Sistema de gerenciamento de atividades da biblioteca
+
 ##Problemática
-Manutenir bibliotecas é complicado, manter controle sobre as entradas e saídas de livros requer muito dos bibliotecarios e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário. 
-Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso, o librery, sana a necessidade de um ocupador para a biblioteca.
+Manutenir bibliotecas é complicado; de tal modo, controlar as entradas e saídas dos livros que requerem muito dos bibliotecários e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário. Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso. O Librery, sana a necessidade de um ocupador para a biblioteca.
 
 # Time
 
@@ -51,4 +51,4 @@ Rodando
 npm start
 ```
 # Licença
-- MIT(https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+- [MIT](https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
