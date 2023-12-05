@@ -1,20 +1,13 @@
 # Librery
 
-<<<<<<< HEAD
 Sistema de gerenciamento de atividades da biblioteca
 
-##Problemática
-Manutenir bibliotecas é complicado; de tal modo, controlar as entradas e saídas dos livros que requerem muito dos bibliotecários e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário. Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso. O Librery, sana a necessidade de um ocupador para a biblioteca.
-=======
+## Problemática
+Manutenir bibliotecas é complicado. De tal modo, controlar as entradas e saídas dos livros que requerem muito dos bibliotecários e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário. Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso. O Librery, sana a necessidade de um ocupador para a biblioteca.
+
 ## Descrição
 
-Sistema bibliotecario livre. 
-
-## Problematica
-
-Manutenir bibliotecas é complicado, manter controle sobre as entradas e saídas de livros requer muito dos bibliotecarios e até inviabiliza a utilização da biblioteca, caso não haja um bibliotecário. 
-Visando mitigar o problema de bibliotecas existentes e com pouco, ou, nenhum uso, o librery, sana a necessidade de um ocupador para a biblioteca.
->>>>>>> cbe12c719810348b9ea24a994fb64c24cbab87e0
+Sistema bibliotecario livre.
 
 ## Objetivos
 
