@@ -3,21 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-<<<<<<< HEAD
 require('dotenv').config();
-console.log(process.env);
-=======
->>>>>>> cbe12c719810348b9ea24a994fb64c24cbab87e0
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var cad_aln = require('./routes/cad.aln');
+var AdmPanel = require('./routes/AdmPanel');
 
 var app = express();
 var database = require('./database/database');
+const { request } = require('http');
 
 //setup libraries
-app.use('/css',express.static('./node_modules/bootstrap/dist/css'));
-app.use('/js',express.static('./node_modules/bootstrap/dist/js'));
+app.use(express.static('node_modules/bootstrap/dist/css'));
+app.use(express.static('node_modules/bootstrap/dist/js'));
 
 
 // view engine setup
@@ -32,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/cad_aln', cad_aln);
+app.use('/AdmPanel',AdmPanel);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

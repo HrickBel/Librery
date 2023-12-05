@@ -1,0 +1,42 @@
+.crd{
+    background: #25b270;
+    height: 30vh;
+}
+
+.crd:nth-child(1){
+    background: #009ed1;
+    border-radius: 0px 0px 0px 60px;
+}
+
+.crd:nth-child(3){
+    background: #009ed1;
+    border-radius: 0px 60px 0px 0px;
+}
+
+.crd p{
+    font-size: 16px;
+    font-variant: small-caps;
+    color:#ffffff;
+}
+.crd h2{
+    color:#ffffff;
+}
+
+.infos{
+    background: #f1f1f1;
+
+    border-radius: 80px 0px 80px 0px;
+
+    margin: 100px;
+}
+
+.subtitle{
+    width: 400px;
+    height: 300px;
+    transform: translate(100px,175px);
+
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color:#ffffff;
+
+}

@@ -2,10 +2,42 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/navbar.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/index.css' />
+    <link rel="stylesheet" type="text/css" href='bootstrap.min.css'>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <%- include('components/navbar-guest') %>
+    <div class="container mb-5 text-center">
+      <div class="row">
+        <div class="crd col">
+          <h2 class="pt-4 pb-2">Acessível</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis eveniet incidunt suscipit voluptas ex adipisci eos porro optio rem tempora delectus, rerum natus ipsam at perspiciatis non aliquam impedit!</p>
+        </div>
+        <div class="crd col-4">
+          <h2 class="pt-4 pb-2">Confiavel</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis eveniet incidunt suscipit voluptas ex adipisci eos porro optio rem tempora delectus, rerum natus ipsam at perspiciatis non aliquam impedit!</p>
+        </div>
+        <div class="crd col">
+          <h2 class="pt-4 pb-2">Diverso</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis eveniet incidunt suscipit voluptas ex adipisci eos porro optio rem tempora delectus, rerum natus ipsam at perspiciatis non aliquam impedit!</p>
+        </div>
+      </div>
+    </div>
+    <div class="infos container p-3">
+      <div class="d-flex flex-row justify-content-center align-items-center">
+        <img class="mb-4" style="width: 50px; height: 50px;" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Books_Silhouette.svg">
+        <h2><b>o que é o librery?</b></h2>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni dicta aliquid officia quod, voluptatibus ducimus maiores, est sunt temporibus assumenda dolorem magnam doloribus. Accusantium iusto sapiente inventore nemo consectetur?
+      </p>
+    </div>
+    <div class="d-flex">
+      <p class="subtitle position-absolute">“A leitura é o caminho mais curto para o conhecimento”.<br>— Aristóteles</p>
+      <img id="img_libre" class="w-100 h-75" src="https://simages.ecampus.com/images/FAST/media/864/NLU-Campus-Store-Storefront-2022_Widget-Image-How-To-20223215254-202231715476.webp">
+    </div>
+    <%- include('components/bottombar') %>
   </body>
 </html>

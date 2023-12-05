@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/cadaln.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/navbar.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/index.css' />
+    <link rel="stylesheet" type="text/css" href='bootstrap.min.css'>
+</head>
+<body>
+    <%- include('components/navbar-guest')%>
+    <main class="main">
+            <div class="register position-absolute card w-50 p-5">
+                <h5 class="card-title">cadastrar</h5>
+                <form>
+                <label for="name" class="form-label"> nome </label><br/>
+                <input type="text" placeholder="nome" class="form-control" name="name">
+                <label for="matricula" class="form-label"> data de nascimento </label><br/>
+                <input type="date" class="form-control" name="birth">
+                <label for="matricula" class="form-label"> email </label><br/>
+                <input type="email" placeholder="email@gmail.com" class="form-control" name="mail">
+                <label for="matricula" class="form-label"> matrícula </label><br/>
+                <input type="text" class="form-control" name="mat">
+                <label for="matricula" class="form-label"> senha </label><br/>
+                <input type="password" class="form-control" name="mat">
+                <label for="matricula" class="form-label"> confirmar senha </label><br/>
+                <input type="password" class="form-control" name="mat">            
+                <input type="submit" class="c-primary">            
+            </form>
+        </div>
+    </main>
+
+    <%- include('components/bottombar') %>
+</body>
+</html>
