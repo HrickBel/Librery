@@ -12,27 +12,26 @@
 </head>
 <body>
     <%- include('components/navbar-guest')%>
-    <main class="main">
-            <div class="register position-absolute card w-50 p-5">
+    <div class="d-flex justify-content-center">
+            <div class="register card p-5">
                 <h5 class="card-title">cadastrar</h5>
-                <form>
-                <label for="name" class="form-label"> nome </label><br/>
-                <input type="text" placeholder="nome" class="form-control" name="name">
-                <label for="matricula" class="form-label"> data de nascimento </label><br/>
-                <input type="date" class="form-control" name="birth">
-                <label for="matricula" class="form-label"> email </label><br/>
-                <input type="email" placeholder="email@gmail.com" class="form-control" name="mail">
-                <label for="matricula" class="form-label"> matrícula </label><br/>
-                <input type="text" class="form-control" name="mat">
-                <label for="matricula" class="form-label"> senha </label><br/>
-                <input type="password" class="form-control" name="mat">
-                <label for="matricula" class="form-label"> confirmar senha </label><br/>
-                <input type="password" class="form-control" name="mat">            
-                <input type="submit" class="c-primary">            
+                <form class="d-flex flex-column justify-content-center">
+                    <label for="name" class="form-label"> nome </label><br/>
+                    <input type="text" placeholder="nome" class="form-control" name="name">
+                    <label for="matricula" class="form-label"> data de nascimento </label><br/>
+                    <input type="date" class="form-control" name="birth">
+                    <label for="matricula" class="form-label"> email </label><br/>
+                    <input type="email" placeholder="email@gmail.com" class="form-control" name="mail">
+                    <label for="matricula" class="form-label"> matrícula </label><br/>
+                    <input type="text" class="form-control" name="mat">
+                    <label for="matricula" class="form-label"> senha </label><br/>
+                    <input type="password" class="form-control" name="mat">
+                    <label for="matricula" class="form-label"> confirmar senha </label><br/>
+                    <input type="password" class="form-control" name="mat">        
+                    <input type="submit" class="btn btn-light mt-3">            
             </form>
         </div>
-    </main>
-
+    </div>
     <%- include('components/bottombar') %>
 </body>
 </html>
