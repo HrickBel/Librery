@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/cadaln.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/navbar.css' />
+    <link rel='stylesheet' type="text/css" href='/stylesheets/index.css' />
+    <link rel="stylesheet" type="text/css" href='bootstrap.min.css'>
     <title>Document</title>
 </head>
 <body>
-    
+    <%- include('components/navbar-guest')%>
+    <div>
+        <button onclick="next()">next</button>
+        <button onclick="previous()">previous</button>
+    </div>
+
+    <form>
+        <div class="m-5">
+            <h3>usuarios</h3>
+            <table class="table table-dark rounded-5" style="overflow: hidden;">
+                <tr class="center">
+                    <th scope="col">id</th>
+                    <th scope="col">nome</th>
+                    <th scope="col">matrícula</th>
+                    <th scope="col">email</th>
+                    <th scope="col">matCancelada</th>
+                </tr>
+                <tr>
+                    <%for(let i=0; i < 300;i++){%>                      
+                        <tr class="ps-2" onclick="showOptionsRegister(`<%=i%>`)">
+                            <td><%=i+1%></td>
+                            <td>nome</td>
+                            <td>matrícula</td>
+                            <td>email</td>
+                            <td>matCancelada</td>
+                            <tr>
+                                <th class="ps-5" colspan="5" id="<%=i%>" hidden>
+                                    <input class="btn btn-secondary ms-4" type="button" value="editar">
+                                    <input class="btn btn-danger ms-4" type="button" value="deletar">
+                                </th>
+                            </tr>
+                        </tr>
+                    <%}%>
+                    <td>
+                    </td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <input class="btn btn-primary" type="button" value="registrar">
+        </form>
+    </div>
+    <%- include('components/bottombar')%>
+    <script>
+        function showOptionsRegister(id){
+            hidRow = document.getElementById(id);
+            hidRow.hidden = !hidRow.hidden;
+            console.log("showOptionsRegister at ID:", hidRow.id, " hidden:", hidRow.hidden);
+        };
+    </script>
 </body>
 </html>
