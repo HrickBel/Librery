@@ -12,11 +12,32 @@
 </head>
 <body>
     <%- include('components/navbar-guest')%>
-    <div class="card m-5 p-3">
-        <h3 class="card-title">Adicionar livro</h3>
-        <form class="card-body">
-            
+    <div class="d-flex flex-column align-items-end me-5">
+        <h4>pesquisar</h4>
+        <form>
+            <input type="search" placeholder="título">
+            <input type="button" value="pesquisar">
         </form>
+    </div>
+    <div class="container d-flex justify-content-center">
+            <div class="col-4 card m-5 p-3">
+                <h3 class="card-title">Adicionar livro</h3>
+            <form action="/addbook" class="d-flex flex-column card-body gap-2">
+                <label for="title">título</label>
+                <input type="text" name="title" id="">
+                <label for="title">autor</label>
+                <input type="text" name="autor" id="">
+                <label for="editora">editora</label>
+                <input type="text" name="editora" id="">
+                <label for="ISBN">ISBN</label>
+                <input type="text" name="ISBN" id="">
+                <label for="Edição">Edição</label>
+                <input type="text" name="Edicao">
+                <label for="ano de lançamento">Ano de publicação</label>
+                <input type="date">
+                <input type="button" value="Registrar">
+            </form>
+        </div>
     </div>
     <%- include('components/bottombar')%>
 </body>

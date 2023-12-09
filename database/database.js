@@ -1,7 +1,6 @@
-require('dotenv').config;
 const {Sequelize} = require('sequelize');
 const config = require('./database.config');
-console.log(config);
+
 const database = new Sequelize(
 	config.database,
 	config.user,
@@ -11,9 +10,10 @@ const database = new Sequelize(
 		dialect:'mysql'
 	});
 
-database.authenticate().then(() => {
-	console.log('Banco de dados conectado');
+database.authenticate().then(() =>{
+	console.log("sucess")
 }).catch((err) => {
-	console.error('não conectado:');
+	console.log('fail');
 });
+	
 module.exports = database;
