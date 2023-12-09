@@ -3,18 +3,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require('dotenv').config();
-console.log(process.env);
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var cad_aln = require('./routes/cad.aln');
-var AddBook = require('./routes/cad.book');
-var AdmPanel = require('./routes/AdmPanel');
+//var usersRouter = require('./routes/users');
+//var cad_aln = require('./routes/cad.aln');
+//var AddBook = require('./routes/cad.book');
+//var AdmPanel = require('./routes/AdmPanel');
 
 var app = express();
+
 var database = require('./database/database');
+const books = require('./model/bookmodel');
+const users = require('./model/usermodel');
+const adm = require('./model/admmodel');
+const pedidos = require('./model/pedidomodel');
+
+const userCtrl = require('./controllers/controller.user');
+
+
 const { request } = require('http');
+
 
 //setup libraries
 app.use(express.static('node_modules/bootstrap/dist/css'));
@@ -32,10 +40,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/cad_aln', cad_aln);
-app.use('/AdmPanel',AdmPanel);
-app.use('/cad_book',AddBook);
+//app.use('/users', usersRouter);
+//app.use('/cad_aln', cad_aln);
+//app.use('/AdmPanel',AdmPanel);
+//app.use('/cad_book',AddBook);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
