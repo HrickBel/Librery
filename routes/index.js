@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const {create} = require('../controllers/controller.user');
+const {create, login} = require('../controllers/controller.user');
+const {create_book} = require('../controllers/controller.books')
 const users = require('../model/user');
 
 /* GET home page. */
@@ -34,5 +35,11 @@ router.get('/AdmPanel', async function(req, res, next) {
 router.get('/cad_book', function(req, res, next) {
 	res.render('addBook', { title: 'Express' });
 });
+router.post('/cadbook', create_book);
 
+router.get('/login',function(req,res){
+	res.render('login',{title:'login'});
+})
+router.post('/loginuser',login)
+;
 module.exports = router;

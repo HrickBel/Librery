@@ -12,10 +12,13 @@ const books = db.define(
 		idEscola:{
 			type:DataTypes.STRING,
 			primaryKey:true,
-			references:{
-				model:'escola',
+			unique:true,
+/*
+references:{
+				model:'escolas',
 				key:'matricula'
 			}
+			*/
 		},
 		ISBN:{
 			type:DataTypes.INTEGER,

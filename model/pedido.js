@@ -14,18 +14,20 @@ const pedidos = db.define(
 		},
 		idUser:{
 			type:DataTypes.INTEGER,
-			primaryKey:true,		
+			primaryKey:true,
+
 			references:{
 				model:'user',
 				key:'id'
-			}
+			}		
 		},
 		idBook:{
 			type:DataTypes.INTEGER,
-			primaryKey:true,	
+			primaryKey:true,
 			references:{
-				model:'book',
+				model:'books',
 				key:'id'
+	
 			}
 		},
 		dataVencimento:{

@@ -1,12 +1,15 @@
 const bodyParser = require('body-parser');
 const users = require('../model/user');
 const md5 = require('md5');
+const { where } = require('sequelize');
+const { raw } = require('mysql2');
 
 const create = async(req,res) => {
 	await users.create({
 		matricula:req.body.mat,
+		idEscola:md5(req.body.mat),
 		name:req.body.name,
-		email:req.body.mail,
+		email:req.body.email,
 		password:md5(req.body.password),
 		isMatActive: true
 	});
@@ -15,15 +18,13 @@ const create = async(req,res) => {
 };
 
 
-const login = (req, res) =>{
-	if(req.header === 200){
-		users.findAll({where:{
-			password: md5(bodyParser.password)
-		}}).then((user) => {
-			return user;});
-	}else if(req.header === 404){
-		return null;
-	}
+const login = async(req, res) =>{
+	let user = users.findAll({where:{
+		email:req.body.email,
+		password:md5(req.body.password)
+	},
+	raw:true});
+	res.json(user);
 };
 
 module.exports = {

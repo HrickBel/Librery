@@ -2,11 +2,11 @@ const {Sequelize} = require('sequelize');
 const config = require('./database.config');
 
 const database = new Sequelize(
-	config.database,
-	config.user,
-	config.password,
+	'librery',
+	'henry',
+	'2005Henry@localhost',
 	{
-		host:config.host,
+		host:'localhost',
 		dialect:'mysql'
 	});
 

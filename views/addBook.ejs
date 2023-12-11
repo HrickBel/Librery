@@ -22,7 +22,7 @@
     <div class="container d-flex justify-content-center">
             <div class="col-4 card m-5 p-3">
                 <h3 class="card-title">Adicionar livro</h3>
-            <form action="/addbook" class="d-flex flex-column card-body gap-2">
+            <form action="/cadbook" class="d-flex flex-column card-body gap-2" method="postes">
                 <label for="title">título</label>
                 <input type="text" name="title" id="">
                 <label for="title">autor</label>
@@ -34,8 +34,8 @@
                 <label for="Edição">Edição</label>
                 <input type="text" name="Edicao">
                 <label for="ano de lançamento">Ano de publicação</label>
-                <input type="date">
-                <input type="button" value="Registrar">
+                <input type="date" name="release">
+                <input type="submit" value="Registrar">
             </form>
         </div>
     </div>

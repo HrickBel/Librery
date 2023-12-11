@@ -10,7 +10,7 @@ const users = db.define(
         },
         idEscola:{
             type:DataTypes.STRING,
-            allowNull:false,
+            allowNull:true,
             primaryKey:true,
             references:{
                 model:'escola',
@@ -41,7 +41,7 @@ const users = db.define(
     }
 );
 
-users.sync({force:true});
+users.sync();
 
 
 module.exports = users;
