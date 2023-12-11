@@ -1,5 +1,5 @@
 const bodyParser = require('body-parser');
-const books = require('../model/bookmodel');
+const books = require('../model/book');
 const md5 = require('md5');
 
 const create = async(req,res) => {
