@@ -9,6 +9,14 @@ const books = db.define(
 			autoIncrement:true,
 			primaryKey:true
 		},
+		idEscola:{
+			type:DataTypes.STRING,
+			primaryKey:true,
+			references:{
+				model:'escola',
+				key:'matricula'
+			}
+		},
 		ISBN:{
 			type:DataTypes.INTEGER,
 			primaryKey:true
@@ -37,6 +45,6 @@ const books = db.define(
 	});
 
 
-books.sync({force:true});
+books.sync();
 
 module.exports = books;

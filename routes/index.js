@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const {create} = require('../controllers/controller.user');
-const users = require('../model/usermodel');
+const users = require('../model/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

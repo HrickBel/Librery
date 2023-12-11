@@ -1,6 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../database/database');
-const { user } = require('../database/database.config');
 
 const users = db.define(
     'users',{
@@ -8,6 +7,15 @@ const users = db.define(
             type:DataTypes.INTEGER,
             autoIncrement:true,
             primaryKey:true,
+        },
+        idEscola:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            primaryKey:true,
+            references:{
+                model:'escola',
+                key:'matricula'
+            }
         },
         matricula:{
             type:DataTypes.INTEGER,
@@ -19,6 +27,7 @@ const users = db.define(
         },
         email:{
             type:DataTypes.STRING(100),
+            unique:true,
             allowNull:false
         },
         password:{
@@ -32,7 +41,7 @@ const users = db.define(
     }
 );
 
-users.sync();
+users.sync({force:true});
 
 
 module.exports = users;

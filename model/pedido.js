@@ -16,7 +16,7 @@ const pedidos = db.define(
 			type:DataTypes.INTEGER,
 			primaryKey:true,		
 			references:{
-				model:'usermodel',
+				model:'user',
 				key:'id'
 			}
 		},
@@ -24,7 +24,7 @@ const pedidos = db.define(
 			type:DataTypes.INTEGER,
 			primaryKey:true,	
 			references:{
-				model:'bookmodel',
+				model:'book',
 				key:'id'
 			}
 		},

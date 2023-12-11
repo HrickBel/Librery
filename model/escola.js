@@ -2,15 +2,20 @@ const { Sequelize, DataTypes } = require('sequelize');
 const db = require('../database/database');
 
 const adm = db.define(
-    'adm',{
+    'escola',{
         id:{
             type:DataTypes.INTEGER,
             autoIncrement:true,
             primaryKey:true,
         },
         matricula:{
-            type:DataTypes.INTEGER,
+            type:DataTypes.STRING,
             primaryKey:true,
+        },
+        email:{
+            type:DataTypes.STRING(100),
+            unique:true,
+            allowNull:false
         },
         password:{
             type:DataTypes.STRING(32),

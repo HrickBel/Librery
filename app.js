@@ -13,10 +13,11 @@ var indexRouter = require('./routes/index');
 var app = express();
 
 var database = require('./database/database');
-const books = require('./model/bookmodel');
-const users = require('./model/usermodel');
-const adm = require('./model/admmodel');
-const pedidos = require('./model/pedidomodel');
+const escola = require('./model/escola');
+const book = require('./model/book');
+const user = require('./model/user');
+const pedido = require('./model/pedido');
+const contatos = require('./model/contatos');
 
 const userCtrl = require('./controllers/controller.user');
 

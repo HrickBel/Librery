@@ -1,5 +1,5 @@
 const bodyParser = require('body-parser');
-const users = require('../model/usermodel');
+const users = require('../model/user');
 const md5 = require('md5');
 
 const create = async(req,res) => {
