@@ -7,7 +7,7 @@ var indexRouter = require('./routes/index');
 const session = require('express-session');
 var app = express();
 
-app.use(session({secret:'data',resave:true,saveUninitialized:true}));
+app.use(session({secret:'wa'}));
 
 var database = require('./database/database');
 const escola = require('./model/escola');
