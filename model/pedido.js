@@ -15,7 +15,6 @@ const pedidos = db.define(
 		idUser:{
 			type:DataTypes.INTEGER,
 			primaryKey:true,
-
 			references:{
 				model:'user',
 				key:'id'
@@ -24,10 +23,11 @@ const pedidos = db.define(
 		idBook:{
 			type:DataTypes.INTEGER,
 			primaryKey:true,
+
 			references:{
 				model:'books',
 				key:'id'
-	
+				
 			}
 		},
 		dataVencimento:{

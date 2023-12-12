@@ -18,7 +18,7 @@ const users = db.define(
             }
         },
         matricula:{
-            type:DataTypes.INTEGER,
+            type:DataTypes.STRING(36),
             primaryKey:true,
         },
         name:{
@@ -27,6 +27,7 @@ const users = db.define(
         },
         email:{
             type:DataTypes.STRING(100),
+            primaryKey:true,
             unique:true,
             allowNull:false
         },

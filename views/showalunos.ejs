@@ -45,7 +45,7 @@
                             <tr>
                                 <th class="ps-4" colspan="6" id="<%=user.id%>" hidden>
                                     <input class="btn btn-secondary ms-4" type="button" value="editar">
-                                    <input class="btn btn-danger ms-4" type="button" value="deletar">
+                                    <input class="btn btn-danger ms-4" type="button" value="deletar" onclick="openOverlay(`<%user.id%>`)">
                                 </th>
                             </tr>
                         </tr>
@@ -63,13 +63,21 @@
             <input class="btn btn-primary" type="submit" value="registrar">
         </form>
     </div>
+    <div class="overlay" id="" hidden>
+        <button onclick="closeOverlay()">x</button>
+        <form class="delete" action="/removeUser">
+            <label>Voce tem certeza que deseja apagar esse usuário?</label>
+            <input type="text" name="matricula" value="<%=user%>">
+        </form>
+    </div>
     <%- include('components/bottombar')%>
-    <script>
+    <script type="text/javascript">
         function showOptionsRegister(id){
             hidRow = document.getElementById(id);
             hidRow.hidden = !hidRow.hidden;
             console.log("showOptionsRegister at ID:", hidRow.id, " hidden:", hidRow.hidden);
         };
     </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </body>
 </html>

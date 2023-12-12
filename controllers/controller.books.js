@@ -14,7 +14,7 @@ const create_book = async(req,res) => {
 		isAtLib:true
 	});
 
-	res.redirect('AdmPanel');
+	res.redirect('/showalunos');
 };
 
 

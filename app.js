@@ -3,14 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/users');
-//var cad_aln = require('./routes/cad.aln');
-//var AddBook = require('./routes/cad.book');
-//var AdmPanel = require('./routes/AdmPanel');
-
+const session = require('express-session');
 var app = express();
+
+app.use(session({secret:'data',resave:true,saveUninitialized:true}));
 
 var database = require('./database/database');
 const escola = require('./model/escola');
@@ -41,10 +38,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-//app.use('/users', usersRouter);
-//app.use('/cad_aln', cad_aln);
-//app.use('/AdmPanel',AdmPanel);
-//app.use('/cad_book',AddBook);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
