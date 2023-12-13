@@ -4,7 +4,6 @@ const md5 = require('md5');
 const {v4: uuid4} = require('uuid');
 const { where } = require('sequelize');
 const { raw } = require('mysql2');
-const session = require('express-session');
 
 const create_aluno = async(req,res) => {
 	await users.create({
@@ -15,6 +14,13 @@ const create_aluno = async(req,res) => {
 		password:md5(req.body.password),
 		isMatActive: false
 	});
+
+	let mat;
+	(await users.findAll({attributes:['matricula'],where:{email:req.body.email},raw:true})).forEach(item => {mat = item.matricula;});
+	console.log(mat);
+
+	req.session.idmat = mat;
+	console.log(req.session.idmat);
 	res.redirect('/');
 };
 
@@ -30,12 +36,16 @@ const getallAlunos = async(req,res) => {
 };
 
 const login = async(req, res) =>{
-	let user = users.findAll({where:{
+	let user;
+	(await users.findAll({attributes:['matricula'],where:{
 		email:req.body.email,
 		password:md5(req.body.password)
 	},
-	raw:true});
-	res.json(user);
+	raw:true})).forEach(item => user = item.id);
+
+	req.session.userid = user;
+
+	res.redirect('/home');
 };
 
 module.exports = {
