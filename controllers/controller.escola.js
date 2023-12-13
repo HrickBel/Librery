@@ -14,6 +14,8 @@ const create_escola = async(req,res) => {
 	let mat;
 	(await escola.findAll({attributes:['matricula'],where:{email:req.body.email},raw:true})).forEach(item => mat = item.matricula);
 
+	req.session.matEscola = mat;
+	
 	res.redirect('/');
 };
 
