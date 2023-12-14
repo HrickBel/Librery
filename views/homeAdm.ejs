@@ -12,15 +12,10 @@
     <title><%=title%></title>
 </head>
 <body>
-    <%- include("components/navbar-user")%>
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex flex-row">
-                    <h3>Bem vindo! Sr(ta). <%=user.name%></h3>
-                </div>
-            </div>
-        </div>
-    </div>
+    <%- include('components/navbar-user')%>
+    <a href="/showalunos">ver alunos</a>
+    <a type="button" class="btn" href="/registerbook">cadastrar livro</a>
+    <a type="button" class="btn" href="/showbooks">ver livro</a>
+    <a type="button" class="btn" href="/showdisabledalunos">ativar matricula</a>
 </body>
 </html>

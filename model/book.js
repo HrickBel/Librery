@@ -13,19 +13,17 @@ const books = db.define(
 			type:DataTypes.STRING,
 			primaryKey:true,
 			unique:true,
-
 			references:{
 				model:'escolas',
 				key:'matricula'
 			}
-
 		},
 		ISBN:{
-			type:DataTypes.INTEGER,
+			type:DataTypes.BIGINT,
 			primaryKey:true
 		},
 		AnoLancamento:{
-			type:DataTypes.DATE
+			type:DataTypes.SMALLINT
 		},
 		title:{
 			type:DataTypes.STRING(256),
@@ -42,6 +40,10 @@ const books = db.define(
 		edicao:{
 			type:DataTypes.TEXT('tiny'),
 			allowNull:true
+		},
+		categoria:{
+			type:DataTypes.STRING(100),
+			allowNull:false
 		},
 		isAtLib:{
 			type:DataTypes.BOOLEAN

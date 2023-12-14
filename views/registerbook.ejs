@@ -8,15 +8,16 @@
     <link rel='stylesheet' type="text/css" href='/stylesheets/navbar.css' />
     <link rel='stylesheet' type="text/css" href='/stylesheets/index.css' />
     <link rel="stylesheet" type="text/css" href='bootstrap.min.css'>
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title><%=title%></title>
 </head>
 <body>
     <%- include('components/navbar-guest')%>
     <div class="d-flex flex-column align-items-end me-5">
         <h4>pesquisar</h4>
-        <form>
-            <input type="search" placeholder="título">
-            <input type="button" value="pesquisar">
+        <form action="/buscarlivro" method="get">
+            <input type="search" name="title" placeholder="título">
+            <input type="submit" value="pesquisar">
         </form>
     </div>
     <div class="container d-flex justify-content-center">
@@ -24,17 +25,30 @@
                 <h3 class="card-title">Adicionar livro</h3>
             <form action="/cadbook" class="d-flex flex-column card-body gap-2" method="POST">
                 <label for="title">título</label>
-                <input type="text" name="title" id="">
+                <input id="title" type="text" name="title" id="">
                 <label for="title">autor</label>
-                <input type="text" name="autor" id="">
+                <input id="author" type="text" name="autor" id="">
                 <label for="editora">editora</label>
-                <input type="text" name="editora" id="">
+                <input id="publisher" type="text" name="editora" id="">
                 <label for="ISBN">ISBN</label>
-                <input type="text" name="ISBN" id="">
+                <input id="isbn" type="text" name="ISBN" id="">
                 <label for="Edição">Edição</label>
-                <input type="text" name="Edicao">
+                <input id="edicao" type="text" name="Edicao">
                 <label for="ano de lançamento">Ano de publicação</label>
-                <input type="date" name="release">
+                <input type="number" name="release">
+                <select name="categoria">
+                    <option value="" default></option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                    <option value="ciencias da natureza e da terra">ciencias da natureza e da terra</option>
+                </select>
                 <input type="submit" value="Registrar">
             </form>
         </div>

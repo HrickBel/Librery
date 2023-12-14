@@ -1,3 +1,7 @@
 .bar{
     background: #009ed1;
 }
+
+.bar a{
+    color:white;
+}

@@ -9,7 +9,7 @@ const pedidos = db.define(
 			autoIncrement:true
 		},
 		dataPedido:{
-			type:DataTypes.DATE,
+			type:DataTypes.DATEONLY,
 			allowNull:false,
 		},
 		idUser:{
