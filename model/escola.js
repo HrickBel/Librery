@@ -8,6 +8,9 @@ const adm = db.define(
             autoIncrement:true,
             primaryKey:true,
         },
+        nome:{
+            type:DataTypes.STRING
+        },
         matricula:{
             type:DataTypes.STRING,
             primaryKey:true,

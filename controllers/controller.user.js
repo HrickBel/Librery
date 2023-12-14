@@ -29,17 +29,18 @@ const create_aluno = async(req,res) => {
 };
 
 const login = async(req, res) =>{
-	let user;
-	(await users.findAll({attributes:['matricula'],where:{
+	let user = (await users.findAll({attributes:['matricula'],where:{
 		email:req.body.email,
 		password:md5(req.body.password)
 	},
-	raw:true})).forEach(item => user = item.matricula);
-	req.session.userid = user;
-	if(user == null){
-		res.redirect('/');
-	}else{
+	raw:true}));
+
+	user.forEach(item => {req.session.uid = item.matricula});
+
+	if(user){
 		res.redirect('/home');
+	}else{	
+		res.redirect('/login');
 	}
 };
 

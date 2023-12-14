@@ -8,6 +8,7 @@ const create_escola = async(req,res) => {
 	try{
 
 		await escola.create({
+			nome:req.body.name,
 			matricula:uuid4(),
 			email:req.body.email,
 			password:md5(req.body.password),
@@ -28,17 +29,11 @@ const create_escola = async(req,res) => {
 };
 
 const loginAdm = async(req,res) => {
-	try{
-		let user = escola.findAll({where:{email:req.body.email}});
-		if((user.email == req.body.email) && (user.password == md5(req.body.password))){
-			res.redirect('homeAdm');
-		}else{
-		}
-	}catch(err){
-		console.log(err);
-		throw err;
+
+	let user = escola.findAll({where:{email:req.body.email}});
+	if(user){
+		res.redirect('homeAdm');
 	}
-	
 	res.redirect('/login');
 };
 

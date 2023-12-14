@@ -6,7 +6,7 @@ const session = require('express-session');
 
 const {create_aluno, login} = require('../controllers/controller.user');
 const {create_book} = require('../controllers/controller.books');
-const {loginAdm} = require('../controllers/controller.escola');
+const {loginAdm, create_escola} = require('../controllers/controller.escola');
 
 const escola = require('../model/escola');
 const pedido = require('../model/pedido');
@@ -74,9 +74,9 @@ router.get('/login',function(req,res){
 	res.render('login',{title:'Login'});
 });
 
-router.get('/home',function(req, res){
+router.get('/home',async function(req, res){
 	//home para usuário
-	res.render('home',{title:'Home',userid:req.session.userid});
+	res.render('home',{title:'Home',user:await users.findAll({where:{matricula:req.session.uid}})});
 });
 
 router.get('/homeadm',function(req,res){
@@ -92,55 +92,19 @@ router.get('/edit',async function(req,res){
 });
 
 router.get('/buscarLivro', async function(req,res){
-	const url = 'https://openlibrary.org/search.json?title=';
+	res.render('registerbook',{ title: 'Librery'});
+});
 
-	console.log(url+req.query['title'].replace(/ /g,'+'));
-
-	let dataq = {
-		title:'',
-		autor:'',
-		isbn:[],
-		anoLacamento:0,
-		editora:[]
-	};
-
-	axios.get(url+req.query['title'].replace(/ /g,'+')).then((response) => {
-		if (response.data.docs && response.data.docs.length > 0) {
-			const docs = response.data.docs[0];
-			const { title, author_name, isbn, first_publish_year, publisher } = docs;
-			dataq = {
-				title:{title},
-				autor:{author_name},
-				isbn:{isbn},
-				anoLacamento:{first_publish_year},
-				editora:{publisher}
-			};
-		  } else {
-			console.log('No documents found.');
-		  }
-		})
-		.catch(error => {
-		  console.error('Error making the request:', error.message);
-	});
-
-	console.log(dataq);
-/*
-	let qbook = {
-		title:data.title,
-		autor:data.author_name,
-		ISBN:data.isbn,
-		editora:data.publisher
-	};
-*/
-
-
-	res.render('registerbook',{ title: 'Librery',});
-})
+router.get('/logout',function(req,res){
+	req.session.uid = '';
+	res.redirect('index')
+});
 
 /*POST routes */
 router.post('/cadbook', create_book);
 
-router.post('/new', create_aluno);
+router.post('/registeraluno', create_aluno);
+router.post('/registerescola', create_escola);
 
 router.post('/loginuser',login);
 

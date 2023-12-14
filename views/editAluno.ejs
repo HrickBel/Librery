@@ -12,7 +12,7 @@
     <title><%=title%></title>
 </head>
 <body>
-    <%=user.matricula%>
+    <%- include("components/navbar-user")%>
     <form action="/updateAluno" method="post">
         <label for="nome">nome</label>
         <p><%=user.name%></p>

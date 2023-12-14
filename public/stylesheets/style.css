@@ -4,8 +4,12 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
+a{
   color: #00B7FF;
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
 }
 .on{
   color:green;
