@@ -13,11 +13,11 @@
 </head>
 <body>
     <%- include("components/navbar-user")%>
+    <a href="/homeAdm">voltar</a>
     <form action="/updateAluno" method="post">
         <label for="nome">nome</label>
-        <p><%=user.name%></p>
         <label for="matricula">matricula</label>
-        <input id="matricula type="text" value="">
+        <input id="matricula type="text" value="`<%=user.name%>`">
     </form>
 </body>
 </html>

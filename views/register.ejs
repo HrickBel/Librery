@@ -16,10 +16,8 @@
     <%- include('components/navbar-guest')%>
     <div class="d-flex justify-content-center">
         <div class="register card p-5">
-                <div id="aluno"  class="on" onclick="registerAsUser()">aluno</div>
-                <div id="escola" class="off" onclick="registerAsEscola()">escola</div>
                 <h5 class="card-title">cadastrar</h5>
-                <form class="d-flex flex-column justify-content-center" action="/registeraluno" method="POST">
+                <form class="d-flex flex-column justify-content-center" action="/registerescola" method="POST">
                     <label for="name" class="form-label"> nome </label><br/>
                     <input type="text" placeholder="nome" class="form-control" name="name" value="">
 

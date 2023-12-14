@@ -13,9 +13,10 @@
 </head>
 <body>
     <%- include('components/navbar-guest')%>
+    <a href="/homeAdm">voltar</a>
     <div class="d-flex flex-column align-items-end me-5">
         <h4>pesquisar</h4>
-        <form action="/buscarlivro" method="get">
+        <form action="/registerbookbyapi" method="get">
             <input type="search" name="title" placeholder="título">
             <input type="submit" value="pesquisar">
         </form>
