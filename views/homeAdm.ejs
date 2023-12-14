@@ -12,8 +12,10 @@
     <title><%=title%></title>
 </head>
 <body>
-    <p>
-        <%=userid%>
-    </p>
+    <%- include('components/navbar-user')%>
+    <a href="/showalunos">ver alunos</a>
+    <a type="button" class="btn" href="/registerbook">cadastrar livro</a>
+    <a type="button" class="btn" href="/showbooks">ver livro</a>
+    <a type="button" class="btn" href="/showdisabledalunos">ativar matricula</a>
 </body>
 </html>

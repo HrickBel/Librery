@@ -12,8 +12,12 @@
     <title><%=title%></title>
 </head>
 <body>
-    <p>
-        <%=userid%>
-    </p>
+    <%=user.matricula%>
+    <form action="/updateAluno" method="post">
+        <label for="nome">nome</label>
+        <p><%=user.name%></p>
+        <label for="matricula">matricula</label>
+        <input id="matricula type="text" value="">
+    </form>
 </body>
 </html>
