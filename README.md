@@ -60,8 +60,6 @@ Sistema bibliotecario livre.
 ![Selenium](https://img.shields.io/badge/Selenium-43B02A.svg?style=for-the-badge&logo=Selenium&logoColor=white)
 ![DotEnv](https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black)
 
-## Casos de uso
-![UserCase Librery](https://github.com/Librery-Biblioteca/Librery/assets/52498435/8a1608f2-8524-45a0-8eee-a2982c17e173)
 
 ## Desenvolvimento
 
@@ -76,6 +74,9 @@ Sistema bibliotecario livre.
 
 ![Canva](https://img.shields.io/badge/Canva-00C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white)
+
+## Casos de uso
+![UserCase Librery](https://github.com/Librery-Biblioteca/Librery/assets/52498435/8a1608f2-8524-45a0-8eee-a2982c17e173)
 
 ## Funcionalidades
 
