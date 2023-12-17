@@ -7,7 +7,6 @@ const { raw } = require('mysql2');
 const database = require('../database/database');
 
 const create_aluno = async(req,res) => {
-	try{
 		await users.create({
 			matricula:uuid4(),
 			idEscola:uuid4(),
@@ -16,15 +15,6 @@ const create_aluno = async(req,res) => {
 			password:md5(req.body.password),
 			isMatActive: false
 		});
-		
-		let mat;
-		(await users.findAll({attributes:['matricula'],where:{email:req.body.email},raw:true})).forEach(item => {mat = item.matricula;});		
-		req.session.idmat = mat;
-	}catch(err){
-		console.log(err);
-	}finally{
-		database.close();
-	}
 	res.redirect('/showAlunos');
 };
 
@@ -35,7 +25,7 @@ const login = async(req, res) =>{
 	},
 	raw:true}));
 
-	user.forEach(item => {req.session.uid = item.matricula});
+	user.forEach(item => {req.session.idmat = item.matricula;});
 
 	if(user){
 		res.redirect('/home');

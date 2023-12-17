@@ -7,29 +7,18 @@ const database = require('../database/database');
 const axios = require('axios');
 
 const create_book = async(req,res) => {
-	try {
-		await books.create({
-			idEscola:uuid4(),
-			ISBN:req.body.ISBN,
-			AnoLancamento:req.body.release,
-			title:req.body.title,
-			editora:req.body.editora,
-			autor:req.body.autor,
-			edicao:req.body.edicao,
-			categoria:req.body.categoria,
-			isAtLib:true
-		});
-	} catch (error) {
-		if(error instanceof DatabaseError){
-			console.error('Sequelize Database Error:', error.message);
-		}else{
-			console.error('error:', error.message);
-		}
-		
-	}finally{
-		await database.close();
-	}
 
+	await books.create({
+		idEscola:uuid4(),
+		ISBN:req.body.ISBN,
+		AnoLancamento:req.body.release,
+		title:req.body.title,
+		editora:req.body.editora,
+		autor:req.body.autor,
+		edicao:req.body.edicao,
+		categoria:req.body.categoria,
+		isAtLib:true
+	});
 
 	res.redirect('/registerbook');
 };
@@ -42,11 +31,11 @@ const listbook_category = async (req,res) =>{
 	await books.findAll({where:{categoria:req.query['categoria']}})
 }
 
-const listbook_api = async (req,res) => {
+const createbook_api = async (req,res) => {
 	const url = 'https://openlibrary.org/search.json?title=';
 
 	
-	axios.get(url+req.query['title'].replace(/ /g,'+')).then((response) => {
+	axios.get(url+req.query['title'].replace(/ /g,'+')).then(async (response) => {
 		if (response.data.docs && response.data.docs.length > 0) {
 			const docs = response.data.docs[0];
 			const { title, author_name, isbn, first_publish_year, publisher } = docs;
@@ -59,7 +48,17 @@ const listbook_api = async (req,res) => {
 				publisher: docs.publisher ? docs.publisher : 'N/A',
 			  };
 
-			sessionStorage('book',bookData);
+			  await books.create({
+				idEscola:uuid4(),
+				ISBN:docs.isbn[0],
+				AnoLancamento:docs.first_publish_year[0],
+				title:docs.title,
+				editora:docs.publisher[0],
+				autor:docs.author_name[0],
+				edicao:'3 edicao',
+				categoria:'',
+				isAtLib:true
+			});
 			
 		  } else {
 			console.log('No documents found.');
@@ -67,10 +66,11 @@ const listbook_api = async (req,res) => {
 		}).catch(error => {
 		  console.error('Error making the request:', error.message);
 	});
+	res.send(200);
 }
 module.exports = {
 	create_book,
 	listbook_category,
 	listbook_title,
-	listbook_api
+	createbook_api
 };

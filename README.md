@@ -11,20 +11,17 @@ Sistema bibliotecario livre.
 
 ## Objetivos
 
-<h3>gerais</h3>
-<ul>
-  <li>Possibilitar acesso aos exemplares da biblioteca</li>
-  <li>Estimular a prática da leitura</li>
-  <li>Movimentar bibliotecas em desuso</li>
-</ul>
-<h3>específicos</h3>
-<ul>
-  <li>Incentivar a leitura a fim de incluir alunos baixa renda</li>
-  <li>Combater as lacunas da alfabetização precária</li>
-  <li>Estimular o hábito da leitura como lazer</li>
-  <li>Viabilizar a utlização do recurso da biblioteca sem a necessidade de um bibliotecario</li>
-  <li>Estimular a habilidade de focar em uma atividade</li>
-</ul>
+### Gerais
+- Possibilitar acesso aos exemplares da biblioteca
+- Estimular a prática da leitura
+- Movimentar bibliotecas em desuso
+
+### Específicos
+- Incentivar a leitura a fim de incluir alunos de baixa renda
+- Combater as lacunas da alfabetização precária
+- Estimular o hábito da leitura como lazer
+- Viabilizar a utilização do recurso da biblioteca sem a necessidade de um bibliotecário
+- Estimular a habilidade de focar em uma atividade
 
 ## Sistemas similares
 <h3>Pergamum</h3>
@@ -63,6 +60,7 @@ Sistema bibliotecario livre.
 ![Selenium](https://img.shields.io/badge/Selenium-43B02A.svg?style=for-the-badge&logo=Selenium&logoColor=white)
 ![DotEnv](https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black)
 
+
 ## Desenvolvimento
 
 ![vsCode](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC.svg?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
@@ -77,14 +75,17 @@ Sistema bibliotecario livre.
 ![Canva](https://img.shields.io/badge/Canva-00C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white)
 
+## Casos de uso
+![UserCase Librery](https://github.com/Librery-Biblioteca/Librery/assets/52498435/8a1608f2-8524-45a0-8eee-a2982c17e173)
+
 ## Funcionalidades
 
-<h3>Administrador</h3>
+### Administrador
 
 - Registrar novo exemplar
 - Remover exemplar
 - Remover penalidade
-<h3>Usuário</h3>
+### Usuário
 
 - Alugar um livro
 - Renovar o prazo de entrega do livro
