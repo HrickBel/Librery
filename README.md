@@ -75,6 +75,11 @@ Sistema bibliotecario livre.
 ![Canva](https://img.shields.io/badge/Canva-00C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white)
 
+##personas
+![Kaua](https://github.com/Librery-Biblioteca/Documentation/blob/main/images/a%5B1%5D.jpg)
+![Pedro](https://github.com/Librery-Biblioteca/Documentation/blob/main/images/b[1].jpg)
+![Soraya](https://github.com/Librery-Biblioteca/Documentation/blob/main/images/c[1].jpg)
+
 ## Casos de uso
 ![UserCase Librery](https://github.com/Librery-Biblioteca/Librery/assets/52498435/8a1608f2-8524-45a0-8eee-a2982c17e173)
 
@@ -115,10 +120,6 @@ Rodando
 ```
 npm start
 ```
-
-## Configuração
-
-## Utilização
 
 # Licença
 - [MIT](https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
