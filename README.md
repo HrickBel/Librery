@@ -83,6 +83,11 @@ Sistema bibliotecario livre.
 ## Casos de uso
 ![UserCase Librery](https://github.com/Librery-Biblioteca/Librery/assets/52498435/8a1608f2-8524-45a0-8eee-a2982c17e173)
 
+## Banco de dados
+
+![Banco de dados](https://github.com/Librery-Biblioteca/Documentation/blob/main/images/Diagrama%20em%20branco(2).png)
+
+
 ## Funcionalidades
 
 ### Administrador
